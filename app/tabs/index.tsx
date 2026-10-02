@@ -7,12 +7,11 @@ import {
   View,
 } from "react-native";
 
-import Header from "../components/Header";
-import Services from "../components/Services";
-import Categories from "../components/Categories";
-import Filters from "../components/Filters";
-import RestaurantSections from "../components/RestaurantSections";
-import BottomNavigation from "../components/BottomNavigation";
+import Categories from "../../scr/components/Categories";
+import Filters from "../../scr/components/Filters";
+import Header from "../../scr/components/Header";
+import RestaurantSections from "../../scr/components/RestaurantSections";
+import Services from "../../scr/components/Services";
 
 export default function Index() {
   return (

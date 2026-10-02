@@ -1,4 +1,4 @@
-
+import Ionicons from "@expo/vector-icons/Ionicons";
 import { useState } from "react";
 import {
   Image,
@@ -9,29 +9,23 @@ import {
   TextInput,
   View,
 } from "react-native";
-import Ionicons from "@expo/vector-icons/Ionicons";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function MapScreen() {
   const [search, setSearch] = useState("");
 
-  const showSubway = "subway"
-    .includes(search.trim().toLowerCase());
+  const showSubway = "subway".includes(search.trim().toLowerCase());
 
   return (
     <View style={styles.container}>
       <ImageBackground
-        source={require("../../assets/images/Map.png")}
+        source={require("../assets/images/Map.png")}
         style={styles.map}
         resizeMode="cover"
       >
         <SafeAreaView edges={["top"]} style={styles.topArea}>
           <View style={styles.searchBar}>
-            <Ionicons
-              name="search-outline"
-              size={22}
-              color="black"
-            />
+            <Ionicons name="search-outline" size={22} color="black" />
 
             <TextInput
               style={styles.searchInput}
@@ -50,34 +44,18 @@ export default function MapScreen() {
             contentContainerStyle={styles.filters}
           >
             <View style={styles.filter}>
-              <Ionicons
-                name="walk-outline"
-                size={18}
-                color="black"
-              />
+              <Ionicons name="walk-outline" size={18} color="black" />
               <Text>Pickup</Text>
-              <Ionicons
-                name="chevron-down-outline"
-                size={14}
-                color="black"
-              />
+              <Ionicons name="chevron-down-outline" size={14} color="black" />
             </View>
 
             <View style={styles.filter}>
               <Text>Cuisine</Text>
-              <Ionicons
-                name="chevron-down-outline"
-                size={14}
-                color="black"
-              />
+              <Ionicons name="chevron-down-outline" size={14} color="black" />
             </View>
 
             <View style={styles.filter}>
-              <Ionicons
-                name="ribbon-outline"
-                size={18}
-                color="black"
-              />
+              <Ionicons name="ribbon-outline" size={18} color="black" />
               <Text>Best overall</Text>
             </View>
           </ScrollView>
@@ -85,34 +63,24 @@ export default function MapScreen() {
       </ImageBackground>
 
       <View style={styles.bottomCard}>
-        <Text style={styles.heading}>
-          Pickup spots near you
-        </Text>
+        <Text style={styles.heading}>Pickup spots near you</Text>
 
         {showSubway ? (
           <>
             <View style={styles.imageContainer}>
               <Image
-                source={require("../../assets/images/subway.png")}
+                source={require("../assets/images/subway.png")}
                 style={styles.restaurantImage}
               />
 
               <View style={styles.offerBadge}>
-                <Ionicons
-                  name="pricetag"
-                  size={13}
-                  color="white"
-                />
-                <Text style={styles.offerText}>
-                  Buy 1, get 1
-                </Text>
+                <Ionicons name="pricetag" size={13} color="white" />
+                <Text style={styles.offerText}>Buy 1, get 1</Text>
               </View>
             </View>
 
             <Text style={styles.restaurantName}>Subway</Text>
-            <Text style={styles.subtitle}>
-              Sandwiches · Pickup
-            </Text>
+            <Text style={styles.subtitle}>Sandwiches · Pickup</Text>
           </>
         ) : (
           <Text style={styles.subtitle}>
