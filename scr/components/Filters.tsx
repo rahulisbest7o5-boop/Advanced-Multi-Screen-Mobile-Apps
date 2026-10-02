@@ -1,0 +1,27 @@
+
+import { ScrollView, StyleSheet, Text, View } from "react-native";
+import Ionicons from "@expo/vector-icons/Ionicons";
+
+export default function Filters() {
+  return (
+    <ScrollView horizontal showsHorizontalScrollIndicator={false}>
+      <View style={styles.row}>
+        <Text>Pickup</Text>
+        <Text>Offers</Text>
+        <Text>Delivery fee</Text>
+        <Text>Under 30</Text>
+        <Ionicons name="chevron-down-outline" size={20} color="black" />
+      </View>
+    </ScrollView>
+  );
+}
+
+const styles = StyleSheet.create({
+  row: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 28,
+    paddingHorizontal: 20,
+    paddingVertical: 12,
+  },
+});
