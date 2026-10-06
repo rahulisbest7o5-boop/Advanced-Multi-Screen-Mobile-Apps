@@ -124,7 +124,14 @@ const styles = StyleSheet.create({
     fontSize: 12,
     color: "gray",
   },
-
+  avatar: {
+    width: 56,
+    height: 56,
+    borderRadius: 28,
+    backgroundColor: "#1f1f1f",
+    justifyContent: "center",
+    alignItems: "center",
+  },
   avatarText: {
     fontSize: 19,
     fontWeight: "bold",
