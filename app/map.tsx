@@ -1,7 +1,6 @@
 import Ionicons from "@expo/vector-icons/Ionicons";
 import { useState } from "react";
 import {
-  Image,
   ImageBackground,
   ScrollView,
   StyleSheet,
@@ -13,8 +12,6 @@ import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function MapScreen() {
   const [search, setSearch] = useState("");
-
-  const showSubway = "subway".includes(search.trim().toLowerCase());
 
   return (
     <View style={styles.container}>
@@ -64,29 +61,6 @@ export default function MapScreen() {
 
       <View style={styles.bottomCard}>
         <Text style={styles.heading}>Pickup spots near you</Text>
-
-        {showSubway ? (
-          <>
-            <View style={styles.imageContainer}>
-              <Image
-                source={require("../assets/images/subway.png")}
-                style={styles.restaurantImage}
-              />
-
-              <View style={styles.offerBadge}>
-                <Ionicons name="pricetag" size={13} color="white" />
-                <Text style={styles.offerText}>Buy 1, get 1</Text>
-              </View>
-            </View>
-
-            <Text style={styles.restaurantName}>Subway</Text>
-            <Text style={styles.subtitle}>Sandwiches · Pickup</Text>
-          </>
-        ) : (
-          <Text style={styles.subtitle}>
-            No pickup spots match your search.
-          </Text>
-        )}
       </View>
     </View>
   );
