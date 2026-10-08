@@ -31,5 +31,7 @@ Profile
 I used the Uber Eats app as a reference for the layout, styling, and navigation of my multi-screen mobile app. 
 https://reactnative.dev/docs/getting-started
 
+
+
 ## AI Usage
 I used ChatGPT to help troubleshoot errors in app.json, resolve lint errors, and understand errors encountered while developing the app. AI assistance was used to explain possible causes and suggest fixes.
