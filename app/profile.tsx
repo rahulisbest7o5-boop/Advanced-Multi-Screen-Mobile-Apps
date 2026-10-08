@@ -16,7 +16,7 @@ export default function ProfileScreen() {
           </View>
 
           <View style={styles.avatar}>
-            <Text style={styles.avatarText}>GT</Text>
+            <Text style={styles.avatarText}>RT</Text>
           </View>
         </View>
 

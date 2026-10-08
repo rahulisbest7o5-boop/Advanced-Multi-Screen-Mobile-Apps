@@ -1,4 +1,3 @@
-
 import Ionicons from "@expo/vector-icons/Ionicons";
 import { Image, ScrollView, StyleSheet, Text, View } from "react-native";
 
@@ -15,10 +14,7 @@ export default function RestaurantSections() {
 
       <SectionTitle title="Featured on Uber Eats" />
 
-      <ScrollView
-        horizontal
-        showsHorizontalScrollIndicator={false}
-      >
+      <ScrollView horizontal showsHorizontalScrollIndicator={false}>
         <Image
           source={require("../../assets/images/starbucks.png")}
           style={styles.image}
@@ -45,13 +41,9 @@ export default function RestaurantSections() {
         />
       </ScrollView>
 
-      
       <SectionTitle title="Places you might like" />
 
-      <ScrollView
-        horizontal
-        showsHorizontalScrollIndicator={false}
-      >
+      <ScrollView horizontal showsHorizontalScrollIndicator={false}>
         <Image
           source={require("../../assets/images/walmart.png")}
           style={styles.image}
@@ -76,11 +68,7 @@ function SectionTitle({ title }: { title: string }) {
     <View style={styles.sectionHeader}>
       <Text style={styles.sectionText}>{title}</Text>
 
-      <Ionicons
-        name="chevron-forward-outline"
-        size={20}
-        color="black"
-      />
+      <Ionicons name="chevron-forward-outline" size={20} color="black" />
     </View>
   );
 }
@@ -122,7 +110,7 @@ const styles = StyleSheet.create({
   },
 
   image: {
-    width: 190,
+    width: 210,
     height: 190,
     marginLeft: 10,
     resizeMode: "cover",
