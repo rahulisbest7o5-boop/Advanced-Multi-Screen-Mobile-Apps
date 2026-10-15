@@ -27,7 +27,7 @@ Profile
 
 
 
-## Reference Screenshots
+## Reference
 I used the Uber Eats app as a reference for the layout, styling, and navigation of my multi-screen mobile app. 
 https://reactnative.dev/docs/getting-started
 
